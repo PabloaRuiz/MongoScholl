@@ -11,7 +11,7 @@ import static org.springframework.http.HttpStatus.BAD_REQUEST;
 public class ErrorControllerAdvice {
 
     private String  MESSAGE  = "ERROR MESSAGE";
-    private String mensagemError  = "já existe aluno cadastrado com esse e-mail ";
+    private String  ERROR  = "já existe aluno cadastrado com esse e-mail ";
 
     @ResponseBody
     @ExceptionHandler(ExceptionEmail.class)
@@ -19,7 +19,7 @@ public class ErrorControllerAdvice {
         return ErrorResponse.builder()
                 .message(MESSAGE)
                 .status(BAD_REQUEST.value())
-                .error(mensagemError)
+                .error(ERROR)
                 .build();
     }
 }
