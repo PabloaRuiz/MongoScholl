@@ -12,7 +12,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @Getter
 @Setter
 @Builder
-public class Habilidade {
+public class Habilidade{
 
     @Id
     @JsonIgnore

@@ -14,12 +14,13 @@ import java.util.Set;
 @Getter
 @Setter
 @Builder
-public class Aluno {
+public class Aluno{
 
     @Id
     private String id;
-    private String nome;
+    private String nomeCompleto;
     private Curso curso;
+    private String email;
 
     private List<Nota> notas;
 
