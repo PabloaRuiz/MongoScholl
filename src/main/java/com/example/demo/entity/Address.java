@@ -7,13 +7,13 @@ import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.math.BigDecimal;
 
-@Document(collection="Endereco")
+@Document(collection="Address")
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
 @Setter
 @Builder
-public class Endereco{
+public class Address {
 
     @Id
     @JsonIgnore

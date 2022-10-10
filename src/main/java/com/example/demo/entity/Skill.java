@@ -1,22 +1,22 @@
 package com.example.demo.entity;
 
+import com.example.demo.entity.Enum.Level;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.*;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-import java.math.BigDecimal;
-
-@Document(collection="Nota")
+@Document(collection="Skill")
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
 @Setter
 @Builder
-public class Nota {
+public class Skill {
 
     @Id
     @JsonIgnore
     private String id;
-    private BigDecimal nota;
+    private String skillName;
+    private Level level;
 }
