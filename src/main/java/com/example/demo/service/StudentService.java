@@ -42,4 +42,11 @@ public class StudentService {
         }
         repository.deleteById(id);
     }
+
+    public Student update(Student student) throws ExceptionStudent {
+        if (student == null || student.getId() == null) {
+            throw new ExceptionStudent();
+        }
+        return repository.save(student);
+    }
 }

@@ -28,4 +28,13 @@ public class Student {
 
     private Set<Skill> skills;
     private Address address;
+
+
+    public BigDecimal getAvgGrades() {
+        var size = getGrades().stream().count();
+        var grade = getGrades().stream().map(
+                e -> e.add(e)).toList();
+
+        return grade.get(0).divide(BigDecimal.valueOf(size));
+    }
 }
